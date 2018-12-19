@@ -11,17 +11,90 @@
 </head>
 <body>
     <header>
-        <div class="jumbotron jumbotron-fluid">
+        <div class="jumbotron jumbotron-fluid text-center">
             <div class="container">
                 <h1 class="display-3">App Hércules</h1>
-                <p class="lead">Welcome to your own App!</p>
+                <p class="lead">Tu aplicación personal</p>
                 <hr class="my-2">
-                <p>More info</p>
-                <p class="lead">
-                    <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
-                </p>
+                <p>¿Empezamos?</p>
+                <button type="button" class="btn btn-primary btn-comenzar">Comenzar</button>
             </div>
         </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 login-wrapper text-center">
+                    <div class="user-pic">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="input-user" id="input-user" aria-describedby="helpId" placeholder="Nombre">                    
+                        <input type="password" class="form-control" name="input-password" id="input-password" aria-describedby="helpId" placeholder="Password"> 
+                        <button type="button" class="btn btn-primary btn-login">Entrar</button>
+                    </div>                  
+                </div>                
+            </div>
+        </div>                
     </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="subir-scroll">UP!</p>
+                <main>
+                    <section class="uno">
+                        <p>¡HOLA!</p>
+                        <p>Vamos a comenzar:</p>
+                        <h2>Gastos fijos</h2>
+                        <p>Selecciona, cambia o borra cualquiera de los siguientes apartados</p>
+                        <hr class="my-2">
+                        <div class="form-group col-6">
+                          <label class="first-label" for="input-alquiler">Alquiler</label>
+                          <input type="text" name="input-alquiler" id="input-alquiler" class="form-control" placeholder="645€">
+                          <button type="button" class="btn btn-primary btn-borrar">Borrar</button>
+                          <button type="button" class="btn btn-primary btn-add">Añadir</button>
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="input-alquiler">T.Transporte</label>
+                            <input type="text" name="input-alquiler" id="input-alquiler" class="form-control" placeholder="144€" value="144">
+                            <button type="button" class="btn btn-primary btn-borrar">Borrar</button>
+                            <button type="button" class="btn btn-primary btn-add">Añadir</button>
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="input-alquiler">S.Coche</label>
+                            <input type="text" name="input-alquiler" id="input-alquiler" class="form-control" placeholder="50€">
+                            <button type="button" class="btn btn-primary btn-borrar">Borrar</button>
+                            <button type="button" class="btn btn-primary btn-add">Añadir</button>
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="input-alquiler">Internet</label>
+                            <input type="text" name="input-alquiler" id="input-alquiler" class="form-control" placeholder="19.95€">
+                            <button type="button" class="btn btn-primary btn-borrar">Borrar</button>
+                            <button type="button" class="btn btn-primary btn-add">Añadir</button>
+                        </div>
+                    </section>
+                    <section class="otros-gastos">
+                        <h2>Otros gastos</h2>
+                        <p>Añade, cambia o borra cualquiera de los siguientes apartados.</p>
+                        <hr class="my-2">
+                        <div class="form-group col-12">
+                            <input type="text" name="input-alquiler" id="input-alquiler" class="form-control" placeholder="Producto">
+                            <input type="text" name="input-alquiler" id="input-alquiler" class="form-control" placeholder="Cantidad">
+                            <button type="button" class="btn btn-primary btn-borrar">Borrar</button>
+                            <button type="button" class="btn btn-primary btn-add">Añadir</button>
+                        </div>
+                    </section>
+                    <section class="sumar">
+                        <h2>Sumar resultados</h2>
+                        <p>¡Ya casi estamos! pincha en <span class="p-sumar">"Sumar"</span> para sumar los resultados y <span class="p-reset">"Reset"</span> para limpiar.</p>
+                        <hr class="my-2">
+                        <button type="button" class="btn btn-warning btn-borrar">Sumar</button>
+                        <button type="button" class="btn btn-danger btn-add">Reset</button>
+                        <div class="resultado"></div>
+                    </section>
+                </main>
+            </div>            
+        </div>
+    </div>
+    <!-- <footer>
+        <p><small>&copy; DivThesign 2018</small></p>
+    </footer> -->
 </body>
 </html>

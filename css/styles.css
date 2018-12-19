@@ -1,3 +1,110 @@
+header {
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100vh;
+}
+header .display-3 {
+  font-size: 3.5rem;
+  font-weight: 400;
+}
+header .jumbotron {
+  height: 55%;
+}
+header .user-pic {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background: aqua;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+header .login-wrapper {
+  position: relative;
+  bottom: 6rem;
+}
+header input {
+  margin-bottom: 1.5rem;
+}
 
+/* footer{
+    position: absolute;
+    top: 100%;
+    text-align: center;
+} */
+.subir-scroll {
+  position: fixed;
+  right: 0.5rem;
+  bottom: 0rem;
+  background: #ffc107;
+  opacity: 0.4;
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.subir-scroll:hover {
+  opacity: 1;
+}
+
+.uno {
+  padding-top: 3rem;
+}
+.uno h2 {
+  margin-bottom: 2rem;
+  background: #E9ECEF;
+  padding: 1rem;
+}
+.uno .first-label {
+  margin-top: 1.5rem;
+}
+.uno .btn-borrar, .uno .btn-add {
+  margin-top: 1rem;
+}
+
+.otros-gastos {
+  padding: 3rem;
+}
+.otros-gastos h2 {
+  margin-bottom: 2rem;
+  background: #E9ECEF;
+  padding: 1rem;
+}
+.otros-gastos input {
+  margin-top: 2rem;
+}
+.otros-gastos button {
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.sumar {
+  padding: 3rem;
+}
+.sumar h2 {
+  margin-bottom: 2rem;
+  background: #E9ECEF;
+  padding: 1rem;
+}
+.sumar input {
+  margin-top: 2rem;
+}
+.sumar button {
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.sumar button:hover {
+  transform: scale(1.2);
+}
+.sumar .p-sumar {
+  border-bottom: 2px solid #ffc107;
+}
+.sumar .p-reset {
+  border-bottom: 2px solid #dc3545;
+}
 
 /*# sourceMappingURL=styles.css.map */

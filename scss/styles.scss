@@ -1,0 +1,107 @@
+header{
+    background: rgba(0,0,0,0.2);
+    width: 100%;
+    height: 100vh;
+    .display-3{
+        font-size: 3.5rem;
+        font-weight: 400;
+    }
+    .jumbotron{
+        height: 55%;
+    }
+    .user-pic{
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        background: aqua;
+        margin-bottom: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .login-wrapper{
+        position: relative;
+        bottom: 6rem;
+    }
+    input{
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* footer{
+    position: absolute;
+    top: 100%;
+    text-align: center;
+} */
+.subir-scroll{
+    position: fixed;
+    right: .5rem;
+    bottom: 0rem;
+    background: #ffc107;
+    opacity: 0.4;
+    border-radius: 50%;
+    padding: .5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover{
+        opacity: 1;
+    }
+}
+.uno{
+    padding-top: 3rem;
+    h2{
+        margin-bottom: 2rem;
+        background: #E9ECEF;
+        padding: 1rem;
+    } 
+    .first-label{
+        margin-top: 1.5rem;
+    }   
+    .btn-borrar,.btn-add{
+        margin-top: 1rem;
+    }
+}
+.otros-gastos{
+    padding: 3rem;
+    h2{
+        margin-bottom: 2rem;
+        background: #E9ECEF;
+        padding: 1rem;
+    }
+    input{
+        margin-top: 2rem;
+    }
+    button{
+        margin-top: 1rem;
+        margin-left: .5rem;
+        margin-right: .5rem;
+
+    }
+}
+.sumar{
+    padding: 3rem;
+    h2{
+        margin-bottom: 2rem;
+        background: #E9ECEF;
+        padding: 1rem;
+    }
+    input{
+        margin-top: 2rem;
+    }
+    button{
+        margin-top: 1rem;
+        margin-left: .5rem;
+        margin-right: .5rem;
+        position: relative;
+        transition: all 0.3s ease;
+        &:hover{
+            transform: scale(1.2);
+        }  
+    }
+    .p-sumar{
+        border-bottom: 2px solid #ffc107;
+    }
+    .p-reset{
+        border-bottom: 2px solid #dc3545;
+    }
+    
+}
