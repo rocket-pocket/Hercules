@@ -1,7 +1,8 @@
 header {
   background: rgba(0, 0, 0, 0.2);
   width: 100%;
-  height: 100vh;
+  height: 120vh;
+  /* msg-login msg-succes msg-wrong msg-warning */
 }
 header .display-3 {
   font-size: 3.5rem;
@@ -39,6 +40,74 @@ header .login-wrapper {
 }
 header input {
   margin-bottom: 1.5rem;
+}
+header .msg-login {
+  display: none;
+}
+header .msg-succes {
+  position: relative;
+  left: 25%;
+  width: 50%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  background: rgba(0, 105, 217, 0.6);
+  color: white;
+  font-weight: 600;
+  animation: happyJump 0.3s ease-out 1;
+}
+@keyframes happyJump {
+  from {
+    opacity: 0;
+    transform: scale(9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+header .msg-wrong {
+  position: relative;
+  left: 25%;
+  width: 50%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  background: rgba(200, 35, 51, 0.6);
+  color: white;
+  font-weight: 600;
+  animation: wrongJump 0.3s ease-out 1;
+}
+@keyframes wrongJump {
+  from {
+    opacity: 0;
+    transform: scale(9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+header .msg-warning {
+  position: relative;
+  left: 25%;
+  width: 50%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  background: rgba(224, 168, 0, 0.6);
+  font-weight: 600;
+  animation: warningJump 0.3s ease-out 1;
+}
+@keyframes warningJump {
+  from {
+    opacity: 0;
+    transform: scale(9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* footer{
