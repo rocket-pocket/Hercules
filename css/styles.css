@@ -19,9 +19,23 @@ header .user-pic {
   margin-left: auto;
   margin-right: auto;
 }
+header .login-wrapper-hide {
+  display: none;
+}
 header .login-wrapper {
   position: relative;
   bottom: 6rem;
+  animation: fadeIn 0.6s ease;
+}
+@keyframes fadeIn {
+  from {
+    bottom: 10rem;
+    opacity: 0;
+  }
+  to {
+    bottom: 6rem;
+    opacity: 1;
+  }
 }
 header input {
   margin-bottom: 1.5rem;
