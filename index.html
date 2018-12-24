@@ -16,8 +16,8 @@
                 <h1 class="display-3">App Hércules</h1>
                 <p class="lead">Tu aplicación personal</p>
                 <hr class="my-2">
-                <p>¿Empezamos?</p>
-                <button type="button" class="btn btn-primary btn-comenzar">Comenzar</button>
+                <p class="p-empezamos">¿Empezamos?</p>
+                <button type="button" class="btn btn-primary btn-comenzar btn-comenzar-hide">Comenzar</button>
             </div>
         </div>
         <div class="container">
@@ -35,7 +35,7 @@
             </div>
         </div>                
     </header>
-    <div class="container">
+    <div class="container main-sections">
         <div class="row">
             <div class="col-12 text-center">
                 <p class="subir-scroll">UP!</p>
@@ -48,25 +48,25 @@
                         <hr class="my-2">
                         <div class="form-group col-6">
                           <label class="first-label" for="input-alquiler">Alquiler</label>
-                          <input type="text" name="input-alquiler" id="input-alquiler" class="form-control" placeholder="645€">
+                          <input type="text" name="input-alquiler" id="input-alquiler" class="form-control" value="20" placeholder="645€">
                           <button type="button" class="btn btn-primary btn-borrar">Borrar</button>
                           <button type="button" class="btn btn-primary btn-add">Añadir</button>
                         </div>
                         <div class="form-group col-6">
-                            <label for="input-alquiler">T.Transporte</label>
-                            <input type="text" name="input-alquiler" id="input-alquiler" class="form-control" placeholder="144€" value="144">
+                            <label for="input-transporte">T.Transporte</label>
+                            <input type="text" name="input-transporte" id="input-transporte" class="form-control" value="20" placeholder="144€">
                             <button type="button" class="btn btn-primary btn-borrar">Borrar</button>
                             <button type="button" class="btn btn-primary btn-add">Añadir</button>
                         </div>
                         <div class="form-group col-6">
-                            <label for="input-alquiler">S.Coche</label>
-                            <input type="text" name="input-alquiler" id="input-alquiler" class="form-control" placeholder="50€">
+                            <label for="input-seguro-coche">S.Coche</label>
+                            <input type="text" name="input-seguro-coche" id="input-seguro-coche" class="form-control" value="20" placeholder="50€">
                             <button type="button" class="btn btn-primary btn-borrar">Borrar</button>
                             <button type="button" class="btn btn-primary btn-add">Añadir</button>
                         </div>
                         <div class="form-group col-6">
-                            <label for="input-alquiler">Internet</label>
-                            <input type="text" name="input-alquiler" id="input-alquiler" class="form-control" placeholder="19.95€">
+                            <label for="input-internet">Internet</label>
+                            <input type="text" name="input-internet" id="input-internet" class="form-control" placeholder="19.95€">
                             <button type="button" class="btn btn-primary btn-borrar">Borrar</button>
                             <button type="button" class="btn btn-primary btn-add">Añadir</button>
                         </div>
@@ -86,7 +86,7 @@
                         <h2>Sumar resultados</h2>
                         <p>¡Ya casi estamos! pincha en <span class="p-sumar">"Sumar"</span> para sumar los resultados y <span class="p-reset">"Reset"</span> para limpiar.</p>
                         <hr class="my-2">
-                        <button type="button" class="btn btn-warning btn-borrar">Sumar</button>
+                        <button type="button" class="btn btn-warning btn-sumar-total">Sumar</button>
                         <button type="button" class="btn btn-danger btn-add">Reset</button>
                         <div class="resultado"></div>
                     </section>
