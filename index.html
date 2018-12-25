@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./Favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="./js/index.js" type="module"></script>
@@ -26,8 +28,8 @@
                     <div class="user-pic">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="input-user" id="input-user" aria-describedby="helpId" placeholder="Nombre">                    
-                        <input type="password" class="form-control" name="input-password" id="input-password" aria-describedby="helpId" placeholder="Password"> 
+                        <input type="text" class="form-control inpt-login hide-when-login" name="input-user" id="input-user" aria-describedby="helpId" placeholder="Nombre">                    
+                        <input type="password" class="form-control inpt-login hide-when-login" name="input-password" id="input-password" aria-describedby="helpId" placeholder="Password"> 
                         <button type="button" id="btn-login" class="btn btn-primary btn-login">Entrar</button>
                         <div class="msg-login msg-succes msg-wrong msg-warning"></div>
                     </div>                  
@@ -46,25 +48,25 @@
                         <h2>Gastos fijos</h2>
                         <p>Selecciona, cambia o borra cualquiera de los siguientes apartados</p>
                         <hr class="my-2">
-                        <div class="form-group col-6">
+                        <div class="form-group col-6 offset-3">
                           <label class="first-label" for="input-alquiler">Alquiler</label>
-                          <input type="text" name="input-alquiler" id="input-alquiler" class="form-control" value="20" placeholder="645€">
+                          <input type="text" name="input-alquiler" id="input-alquiler" class="form-control" placeholder="645€">
                           <button type="button" class="btn btn-primary btn-borrar">Borrar</button>
                           <button type="button" class="btn btn-primary btn-add">Añadir</button>
                         </div>
-                        <div class="form-group col-6">
+                        <div class="form-group col-6 offset-3">
                             <label for="input-transporte">T.Transporte</label>
-                            <input type="text" name="input-transporte" id="input-transporte" class="form-control" value="20" placeholder="144€">
+                            <input type="text" name="input-transporte" id="input-transporte" class="form-control" placeholder="144€">
                             <button type="button" class="btn btn-primary btn-borrar">Borrar</button>
                             <button type="button" class="btn btn-primary btn-add">Añadir</button>
                         </div>
-                        <div class="form-group col-6">
+                        <div class="form-group col-6 offset-3">
                             <label for="input-seguro-coche">S.Coche</label>
-                            <input type="text" name="input-seguro-coche" id="input-seguro-coche" class="form-control" value="20" placeholder="50€">
+                            <input type="text" name="input-seguro-coche" id="input-seguro-coche" class="form-control" placeholder="50€">
                             <button type="button" class="btn btn-primary btn-borrar">Borrar</button>
                             <button type="button" class="btn btn-primary btn-add">Añadir</button>
                         </div>
-                        <div class="form-group col-6">
+                        <div class="form-group col-6 offset-3">
                             <label for="input-internet">Internet</label>
                             <input type="text" name="input-internet" id="input-internet" class="form-control" placeholder="19.95€">
                             <button type="button" class="btn btn-primary btn-borrar">Borrar</button>
@@ -76,8 +78,8 @@
                         <p>Añade, cambia o borra cualquiera de los siguientes apartados.</p>
                         <hr class="my-2">
                         <div class="form-group col-12">
-                            <input type="text" name="input-alquiler" id="input-alquiler" class="form-control" placeholder="Producto">
-                            <input type="text" name="input-alquiler" id="input-alquiler" class="form-control" placeholder="Cantidad">
+                            <input type="text" name="input-producto" id="input-producto" class="form-control" placeholder="Producto">
+                            <input type="text" name="input-cantidad" id="input-cantidad" class="form-control" placeholder="Cantidad">
                             <button type="button" class="btn btn-primary btn-borrar">Borrar</button>
                             <button type="button" class="btn btn-primary btn-add">Añadir</button>
                         </div>
@@ -94,8 +96,8 @@
             </div>            
         </div>
     </div>
-    <!-- <footer>
+    <footer>
         <p><small>&copy; DivThesign 2018</small></p>
-    </footer> -->
+    </footer>
 </body>
 </html>

@@ -1,3 +1,4 @@
+import { gastosFijos } from "./gastosFijos.js";
 
 export class Main{
     constructor(){
@@ -24,30 +25,10 @@ export class Main{
         this.usuarioUnoOk = this.userUno + this.passUno
         this.msgLogin = document.querySelector('.msg-login')
         this.mainSectionOculta = document.querySelector('.main-sections')
-        //Seccion uno
-        this.AInputsGastosFijos = document.querySelectorAll('.uno input')
-        console.log(this.AInputsGastosFijos)
-        console.log('seccion uno')
-        this.aBtnGastosFijos = document.querySelectorAll('.uno button') 
-        this.sumarTotal = document.querySelector('.btn-sumar-total')
         //comienzo
         this.btnComenzar.addEventListener('click', this.mostrarLoginSection.bind(this))
         //login-wrapper
         this.btnLogIn.addEventListener('click', this.logIn.bind(this))
-        //seccion uno
-        this.sumarTotal.addEventListener('click', this.sumarResultadoTotal.bind(this))
-    }
-    sumarResultadoTotal(AInputsGastosFijos){
-        /* this.AInputsGastosFijos.value */
-        let name = []
-        for (let index = 0; index < this.AInputsGastosFijos.length; index++) {
-            /* let element = this.AInputsGastosFijos[index];  */
-            name.push(this.AInputsGastosFijos[index].value)
-            console.log('esta es el name:', name)    
-        }
-        let suma = name.toString()
-        /* element */
-        console.log('esta es la suma:', suma)
     }
     mostrarLoginSection(){
         this.LoginSection.classList.toggle('login-wrapper-hide')
@@ -70,8 +51,11 @@ export class Main{
             console.log('enhorabuena Daniel')
             this.UserPic.innerHTML = '<div class= "user-pic-uno"></div>'
             this.mainSectionOculta.classList.toggle('main-sections')
-            this.inptUser.value = ''
-            this.inptPassw.value = ''
+            this.btnLogIn.innerHTML = 'Log out'
+            this.inptUser.classList.add('hide-when-login')
+            this.inptPassw.classList.add('hide-when-login')
+            this.inptUser.classList.remove('inpt-login')
+            this.inptPassw.classList.remove('inpt-login')
         }else if(this.inptUser.value === this.userDos && this.inptPassw.value === this.passDos){
             /* let succesLoginDos = document.createElement('p')
             succesLoginDos.innerHTML = mensageUserDos
@@ -102,9 +86,9 @@ export class Main{
             this.msgLogin.innerHTML = mensageUserDosWrong
             console.log('error de usuario o password incorrecto')
         }
-    }
-    
+    }    
 }
+new gastosFijos()
 
 
 

@@ -18,6 +18,12 @@ header .btn-comenzar-hide {
 header .btn-comenzar {
   display: initial;
 }
+header .hide-when-login {
+  display: none;
+}
+header .inpt-login {
+  display: initial;
+}
 header .user-pic {
   width: 8rem;
   height: 8rem;
@@ -256,10 +262,10 @@ header .msg-warning {
   transform: scale(1.2);
 }
 .sumar .p-sumar {
-  border-bottom: 2px solid #ffc107;
+  font-weight: 600;
 }
 .sumar .p-reset {
-  border-bottom: 2px solid #dc3545;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=styles.css.map */
