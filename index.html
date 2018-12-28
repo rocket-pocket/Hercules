@@ -48,25 +48,25 @@
                         <h2>Gastos fijos</h2>
                         <p>Selecciona, cambia o borra cualquiera de los siguientes apartados</p>
                         <hr class="my-2">
-                        <div class="form-group col-6 offset-3">
+                        <div class="form-group col-6 offset-3 delete-gasto-fijo">
                           <label class="first-label" for="input-alquiler">Alquiler</label>
                           <input type="text" name="input-alquiler" id="input-alquiler" class="form-control" placeholder="645€">
                           <button type="button" class="btn btn-primary btn-borrar">Borrar</button>
                           <button type="button" class="btn btn-primary btn-add">Añadir</button>
                         </div>
-                        <div class="form-group col-6 offset-3">
+                        <div class="form-group col-6 offset-3 delete-gasto-fijo">
                             <label for="input-transporte">T.Transporte</label>
                             <input type="text" name="input-transporte" id="input-transporte" class="form-control" placeholder="144€">
                             <button type="button" class="btn btn-primary btn-borrar">Borrar</button>
                             <button type="button" class="btn btn-primary btn-add">Añadir</button>
                         </div>
-                        <div class="form-group col-6 offset-3">
+                        <div class="form-group col-6 offset-3 delete-gasto-fijo">
                             <label for="input-seguro-coche">S.Coche</label>
                             <input type="text" name="input-seguro-coche" id="input-seguro-coche" class="form-control" placeholder="50€">
                             <button type="button" class="btn btn-primary btn-borrar">Borrar</button>
                             <button type="button" class="btn btn-primary btn-add">Añadir</button>
                         </div>
-                        <div class="form-group col-6 offset-3">
+                        <div class="form-group col-6 offset-3 delete-gasto-fijo">
                             <label for="input-internet">Internet</label>
                             <input type="text" name="input-internet" id="input-internet" class="form-control" placeholder="19.95€">
                             <button type="button" class="btn btn-primary btn-borrar">Borrar</button>
@@ -80,7 +80,7 @@
                         <div class="form-group col-12">
                             <input type="text" name="input-producto" id="input-producto" class="form-control" placeholder="Producto">
                             <input type="text" name="input-cantidad" id="input-cantidad" class="form-control" placeholder="Cantidad">
-                            <button type="button" class="btn btn-primary btn-borrar">Borrar</button>
+                            <button type="button" class="btn btn-primary btn-borrar-otros-gastos">Borrar</button>
                             <button type="button" class="btn btn-primary btn-add">Añadir</button>
                         </div>
                     </section>
@@ -96,8 +96,12 @@
             </div>            
         </div>
     </div>
-    <footer>
-        <p><small>&copy; DivThesign 2018</small></p>
+    <footer class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p><small>&copy; DivThesign 2018</small></p>
+            </div>
+        </div>        
     </footer>
 </body>
 </html>

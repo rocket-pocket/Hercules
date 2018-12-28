@@ -188,11 +188,7 @@ header .msg-warning {
   display: none;
 }
 
-/* footer{
-    position: absolute;
-    top: 100%;
-    text-align: center;
-} */
+/**/
 .subir-scroll {
   position: fixed;
   right: 0.5rem;
@@ -266,6 +262,15 @@ header .msg-warning {
 }
 .sumar .p-reset {
   font-weight: 600;
+}
+
+.p-total {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #0f8fc2;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 2px 2px 2px rgba(15, 143, 194, 0.6);
 }
 
 /*# sourceMappingURL=styles.css.map */
