@@ -1,3 +1,43 @@
+.add-gastos-fijos{
+    margin-top: 3rem;
+    .wrapper-add-gastos-fijos{
+        margin-bottom: 1rem;
+    }
+    input{
+        margin-top: 1rem;
+    }
+    .hide-btn-show-gastos-fijos{
+        display: none;
+    }
+    .btn-show-gastos-fijos{
+        display: initial;
+    }
+    button{
+        margin: 1rem 0 0 .5rem;
+    }
+    .row-add-gastos-fijos{
+        display: initial;
+        position: relative;
+        animation: showUp 0.3s ease 1;
+    }
+    @keyframes showUp {
+        from{
+            top: -5rem;
+            opacity: 0;
+        }
+        to{
+            top: 0;
+            opacity: 1;
+        }
+    }
+    .hide-add-gastos-fijos{
+        display: none;
+    }
+    .p-msn-gasto-fijo{
+        font-size: 1.5rem;
+    }
+}
+
 .p-total{
     margin-top: 1.5rem;
     padding: 1rem;

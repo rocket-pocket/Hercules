@@ -43,6 +43,7 @@ export class Main{
         let mensageUserDosWarning = 'Introduce usuario y contraseña'
         let mensageUserDosWrong = 'Error de usuario o password'
         if(this.inptUser.value === this.userUno && this.inptPassw.value === this.passUno){
+            this.pComenzar.innerHTML = ''
             this.msgLogin.classList.add('msg-succes')
             this.msgLogin.classList.remove('msg-login')
             this.msgLogin.classList.remove('msg-wrong')
@@ -56,6 +57,9 @@ export class Main{
             this.inptPassw.classList.add('hide-when-login')
             this.inptUser.classList.remove('inpt-login')
             this.inptPassw.classList.remove('inpt-login')
+            if(this.btnLogIn){
+                this.btnLogIn.addEventListener('click', this.logOut.bind(this))
+            }
         }else if(this.inptUser.value === this.userDos && this.inptPassw.value === this.passDos){
             /* let succesLoginDos = document.createElement('p')
             succesLoginDos.innerHTML = mensageUserDos
@@ -86,6 +90,10 @@ export class Main{
             this.msgLogin.innerHTML = mensageUserDosWrong
             console.log('error de usuario o password incorrecto')
         }
+    }
+    logOut(){
+       console.log('hola desde el segundo if')
+       window.location.href = 'http://localhost:8080/'
     }    
 }
 new gastosFijos()
