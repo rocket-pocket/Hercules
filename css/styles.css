@@ -264,6 +264,46 @@ header .msg-warning {
   font-weight: 600;
 }
 
+.add-gastos-fijos {
+  margin-top: 3rem;
+}
+.add-gastos-fijos .wrapper-add-gastos-fijos {
+  margin-bottom: 1rem;
+}
+.add-gastos-fijos input {
+  margin-top: 1rem;
+}
+.add-gastos-fijos .hide-btn-show-gastos-fijos {
+  display: none;
+}
+.add-gastos-fijos .btn-show-gastos-fijos {
+  display: initial;
+}
+.add-gastos-fijos button {
+  margin: 1rem 0 0 0.5rem;
+}
+.add-gastos-fijos .row-add-gastos-fijos {
+  display: initial;
+  position: relative;
+  animation: showUp 0.3s ease 1;
+}
+@keyframes showUp {
+  from {
+    top: -5rem;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.add-gastos-fijos .hide-add-gastos-fijos {
+  display: none;
+}
+.add-gastos-fijos .p-msn-gasto-fijo {
+  font-size: 1.5rem;
+}
+
 .p-total {
   margin-top: 1.5rem;
   padding: 1rem;
