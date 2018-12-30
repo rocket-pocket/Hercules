@@ -1,187 +1,6 @@
-header {
-  background: rgba(0, 0, 0, 0.2);
-  width: 100%;
-  /* height: 120vh; */
-  /* msg-login msg-succes msg-wrong msg-warning */
-}
-header .display-3 {
-  font-size: 3.5rem;
-  font-weight: 400;
-}
-header .jumbotron {
-  height: 55%;
-  background: #cccccc;
-}
-header .btn-comenzar-hide {
-  display: none;
-}
-header .btn-comenzar {
+.display-main-sections {
   display: initial;
-}
-header .hide-when-login {
-  display: none;
-}
-header .inpt-login {
-  display: initial;
-}
-header .user-pic {
-  width: 8rem;
-  height: 8rem;
-  border-radius: 50%;
-  background: aqua;
-  margin-bottom: 1.5rem;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-}
-header .UnknoUser {
-  background-image: url("../assets/UserUnknow.svg");
-  background-position: center center;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-repeat: no-repeat;
-  animation: fadeUpImageUnknowUser 0.5s ease 1;
-}
-@keyframes fadeUpImageUnknowUser {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  80% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-header .user-pic-uno {
-  background-image: url("../assets/HerculesBueno.svg");
-  background-position: center center;
-  width: 105%;
-  height: 105%;
-  border-radius: 50%;
-  background-repeat: no-repeat;
-  animation: fadeUpImageUserUno 0.5s ease 1;
-}
-@keyframes fadeUpImageUserUno {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-header .user-pic-dos {
-  background-image: url("../assets/Herculina.svg");
-  background-position: center center;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-repeat: no-repeat;
-  animation: fadeUpImageUserDos 0.5s ease 1;
-}
-@keyframes fadeUpImageUserDos {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-header .login-wrapper-hide {
-  display: none;
-}
-header .login-wrapper {
   position: relative;
-  bottom: 3.5rem;
-  animation: fadeIn 0.6s ease;
-}
-@keyframes fadeIn {
-  from {
-    bottom: 7.5rem;
-    opacity: 0;
-  }
-  to {
-    bottom: 3.5rem;
-    opacity: 1;
-  }
-}
-header input {
-  margin-bottom: 1.5rem;
-}
-header .msg-login {
-  display: none;
-}
-header .msg-succes {
-  position: relative;
-  left: 25%;
-  width: 50%;
-  padding: 0.5rem;
-  font-size: 1rem;
-  margin-top: 1rem;
-  background: rgba(0, 105, 217, 0.6);
-  color: white;
-  font-weight: 600;
-  animation: happyJump 0.3s ease-out 1;
-}
-@keyframes happyJump {
-  from {
-    opacity: 0;
-    transform: scale(9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-header .msg-wrong {
-  position: relative;
-  left: 25%;
-  width: 50%;
-  padding: 0.5rem;
-  font-size: 1rem;
-  margin-top: 1rem;
-  background: rgba(200, 35, 51, 0.6);
-  color: white;
-  font-weight: 600;
-  animation: wrongJump 0.3s ease-out 1;
-}
-@keyframes wrongJump {
-  from {
-    opacity: 0;
-    transform: scale(9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-header .msg-warning {
-  position: relative;
-  left: 25%;
-  width: 50%;
-  padding: 0.5rem;
-  font-size: 1rem;
-  margin-top: 1rem;
-  background: rgba(224, 168, 0, 0.6);
-  font-weight: 600;
-  animation: warningJump 0.3s ease-out 1;
-}
-@keyframes warningJump {
-  from {
-    opacity: 0;
-    transform: scale(9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
 
 .main-sections {
@@ -205,6 +24,8 @@ header .msg-warning {
 }
 
 .uno {
+  position: relative;
+  top: 0;
   padding-top: 3rem;
 }
 .uno h2 {
@@ -314,5 +135,263 @@ header .msg-warning {
 }
 
 /* #ff7062 */
+footer {
+  width: 100%;
+  height: 100px;
+  /* position: absolute;
+  bottom: 0;
+  left: 0; */
+}
+
+.sticky-header {
+  width: 100%;
+  height: auto;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+  overflow: visible;
+  padding: 10px;
+  background: #e28a8a;
+  transition: all 1s ease;
+  /*  */
+}
+.sticky-header .hide-when-login {
+  display: none;
+}
+.sticky-header .inpt-login {
+  display: initial;
+}
+.sticky-header .col-12 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sticky-header .user-pic {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: aqua;
+  margin-bottom: 0rem;
+  margin-left: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.sticky-header .user-pic-uno {
+  background-image: url("../assets/HerculesBueno.svg");
+  background-position: center center;
+  width: 105%;
+  height: 105%;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  animation: fadeUpImageUserUno 0.5s ease 1;
+}
+.sticky-header button {
+  margin-top: 1rem;
+}
+.sticky-header .msg-succes {
+  display: none;
+}
+
+.initial-header {
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  position: relative;
+  height: auto;
+  /* top: 30vh; */
+  /* msg-login msg-succes msg-wrong msg-warning */
+}
+.initial-header .display-3 {
+  font-size: 3.5rem;
+  font-weight: 400;
+}
+.initial-header .hide-when-login {
+  display: none;
+}
+.initial-header .inpt-login {
+  display: initial;
+}
+.initial-header .col-12 {
+  display: initial;
+}
+.initial-header .user-pic {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background: aqua;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.initial-header .UnknoUser {
+  background-image: url("../assets/UserUnknow.svg");
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  animation: fadeUpImageUnknowUser 0.5s ease 1;
+}
+@keyframes fadeUpImageUnknowUser {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.initial-header .user-pic-uno {
+  background-image: url("../assets/HerculesBueno.svg");
+  background-position: center center;
+  width: 105%;
+  height: 105%;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  animation: fadeUpImageUserUno 0.5s ease 1;
+}
+@keyframes fadeUpImageUserUno {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.initial-header .user-pic-dos {
+  background-image: url("../assets/Herculina.svg");
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  animation: fadeUpImageUserDos 0.5s ease 1;
+}
+@keyframes fadeUpImageUserDos {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.initial-header button {
+  position: relative;
+  top: 0;
+  right: 0;
+}
+.initial-header .login-wrapper-hide {
+  display: none;
+}
+.initial-header .login-wrapper {
+  position: relative;
+  bottom: 3.5rem;
+  animation: fadeIn 0.6s ease;
+}
+@keyframes fadeIn {
+  from {
+    bottom: 7.5rem;
+    opacity: 0;
+  }
+  to {
+    bottom: 3.5rem;
+    opacity: 1;
+  }
+}
+.initial-header input {
+  margin-bottom: 1.5rem;
+}
+.initial-header .msg-login {
+  display: none;
+}
+.initial-header .msg-succes {
+  position: relative;
+  left: 25%;
+  width: 50%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  background: rgba(0, 105, 217, 0.6);
+  color: white;
+  font-weight: 600;
+  animation: happyJump 0.3s ease-out 1;
+}
+@keyframes happyJump {
+  from {
+    opacity: 0;
+    transform: scale(9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.initial-header .msg-wrong {
+  position: relative;
+  left: 25%;
+  width: 50%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  background: rgba(200, 35, 51, 0.6);
+  color: white;
+  font-weight: 600;
+  animation: wrongJump 0.3s ease-out 1;
+}
+@keyframes wrongJump {
+  from {
+    opacity: 0;
+    transform: scale(9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.initial-header .msg-warning {
+  position: relative;
+  left: 25%;
+  width: 50%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  background: rgba(224, 168, 0, 0.6);
+  font-weight: 600;
+  animation: warningJump 0.3s ease-out 1;
+}
+@keyframes warningJump {
+  from {
+    opacity: 0;
+    transform: scale(9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.jumbotron {
+  position: relative;
+  top: 0;
+  margin-bottom: 0;
+  /* height: 30vh; */
+  background: #cccccc;
+}
+.jumbotron .btn-comenzar-hide {
+  display: none;
+}
+.jumbotron .btn-comenzar {
+  display: initial;
+}
 
 /*# sourceMappingURL=styles.css.map */

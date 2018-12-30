@@ -1,4 +1,6 @@
 import { gastosFijos } from "./gastosFijos.js";
+import { headerScroll } from "./scrollHeader.js";
+
 
 export class Main{
     constructor(){
@@ -25,6 +27,7 @@ export class Main{
         this.usuarioUnoOk = this.userUno + this.passUno
         this.msgLogin = document.querySelector('.msg-login')
         this.mainSectionOculta = document.querySelector('.main-sections')
+        console.log(this.mainSectionOculta)
         //comienzo
         this.btnComenzar.addEventListener('click', this.mostrarLoginSection.bind(this))
         //login-wrapper
@@ -97,6 +100,7 @@ export class Main{
     }    
 }
 new gastosFijos()
+new headerScroll()
 
 
 

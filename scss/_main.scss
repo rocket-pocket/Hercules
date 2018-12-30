@@ -1,0 +1,84 @@
+.display-main-sections{
+    display: initial;
+    position: relative;
+}
+.main-sections{
+    display: none;
+}
+/**/
+
+.subir-scroll{
+    position: fixed;
+    right: .5rem;
+    bottom: 0rem;
+    background: #ffc107;
+    opacity: 0.4;
+    border-radius: 50%;
+    padding: .5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover{
+        opacity: 1;
+    }
+}
+.uno{
+    position: relative;
+    top: 0;
+    padding-top: 3rem;
+    h2{
+        margin-bottom: 2rem;
+        background: #E9ECEF;
+        padding: 1rem;
+    } 
+    .first-label{
+        margin-top: 1.5rem;
+    }   
+    .btn-borrar,.btn-add{
+        margin-top: 1rem;
+    }
+}
+.otros-gastos{
+    padding: 3rem;
+    h2{
+        margin-bottom: 2rem;
+        background: #E9ECEF;
+        padding: 1rem;
+    }
+    input{
+        margin-top: 2rem;
+    }
+    button{
+        margin-top: 1rem;
+        margin-left: .5rem;
+        margin-right: .5rem;
+
+    }
+}
+.sumar{
+    padding: 3rem;
+    h2{
+        margin-bottom: 2rem;
+        background: #E9ECEF;
+        padding: 1rem;
+    }
+    input{
+        margin-top: 2rem;
+    }
+    button{
+        margin-top: 1rem;
+        margin-left: .5rem;
+        margin-right: .5rem;
+        position: relative;
+        transition: all 0.3s ease;
+        &:hover{
+            transform: scale(1.2);
+        }  
+    }
+    .p-sumar{
+        font-weight: 600;
+    }
+    .p-reset{
+        font-weight: 600;
+    }
+    
+}

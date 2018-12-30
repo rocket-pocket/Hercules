@@ -1,0 +1,49 @@
+.sticky-header{
+    width: 100%;
+    height: auto;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    overflow: visible;
+    padding: 10px;
+    background: rgb(226, 138, 138);
+    transition: all 1s ease;
+    .hide-when-login{
+        display: none;
+    }
+    .inpt-login{
+        display: initial;
+    }
+    .col-12{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .user-pic{
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        background: aqua;
+        margin-bottom: 0rem;
+        margin-left: 0;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+    .user-pic-uno{
+        background-image: url('../assets/HerculesBueno.svg');
+        background-position: center center;
+        width: 105%;
+        height: 105%;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        animation: fadeUpImageUserUno 0.5s ease 1;
+    }
+    /*  */
+    button{
+        margin-top: 1rem;
+    }
+    .msg-succes{
+        display: none;
+    }
+}
