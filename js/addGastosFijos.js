@@ -23,21 +23,51 @@ export class addGastosFijos{
         this.containerAddGastosFijos.innerHTML = `<p class="p-msn-gasto-fijo">${mensaje}</p>`
     }
     addGastosFijo(){
-        let lista = this.ulListaAddTareas
+        //crear Elemento Producto
+        this.ulListaAddTareas
         this.inputAddProducto.value
-        let tarea = this.inputAddCantidad.value
-        this.nuevaTarea = document.createElement("li"),
-                this.enlace = document.createElement("a"),
-                this.contenido = document.createTextNode(tarea);
+        let tarea = this.inputAddProducto.value
+        let nuevaTarea = document.createElement("li")
+        let enlace = document.createElement("a")
+        let contenido = document.createTextNode(tarea)
 
-                this.enlace.appendChild(this.contenido);
-                lista.appendChild(this.nuevaTarea);
+        ////crear Elemento Cantidad
+        this.inputAddCantidad.value
+        let tarea2 = this.inputAddCantidad.value
+        let enlace2 = document.createElement('a')
+        let contenidoCantidad = document.createTextNode(tarea2)
 
-                for (var i = 0; i <= lista.children.length -1; i++) {
-                    lista.children[i].addEventListener("click", function(){
-                        this.parentNode.removeChild(this);
-                    });
-                }
+        enlace2.appendChild(contenidoCantidad)
+        /* ******************* */
+
+        enlace.appendChild(contenido)
+        this.ulListaAddTareas.appendChild(nuevaTarea);
+        /* ******************* */
+
+        ////crear Elemento Botón Guardar
+        let btnGuardarGastoFijo = document.createElement("button")
+        btnGuardarGastoFijo.className = 'boton-guardar' 
+        let mnsBtnGuardarGastoFijo = document.createTextNode('Guardar')
+        btnGuardarGastoFijo.appendChild(mnsBtnGuardarGastoFijo)
+        /* ******************* */
+
+        ////crear Elemento Botón borrar
+        let btnBorrarGastoFijo = document.createElement("button")
+        btnBorrarGastoFijo.className = 'boton-borrar' 
+        let mnsBtnBorrarGastoFijo = document.createTextNode('Borrar')
+        btnBorrarGastoFijo.appendChild(mnsBtnBorrarGastoFijo)
+        /* ******************* */
+
+
+        for (let i = 0; i <= this.ulListaAddTareas.children.length -1; i++) {
+            nuevaTarea.appendChild(enlace), nuevaTarea.appendChild(enlace2), nuevaTarea.appendChild(btnGuardarGastoFijo), nuevaTarea.appendChild(btnBorrarGastoFijo)
+                /* this.ulListaAddTareas.children[i].addEventListener("click", function(){
+                this.parentNode.removeChild(this); */
+                this.ulListaAddTareas.children[i].addEventListener('click', this.hola.bind(this))
+            
+        }
     }
-    
+    hola(){
+        console.log('hola desde el click')
+    }    
 }
