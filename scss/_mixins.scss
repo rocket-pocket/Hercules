@@ -1,4 +1,4 @@
-
+@import "variables.scss";
 @mixin msgLogin {
     position: relative;
     left: 25%;
@@ -6,4 +6,13 @@
     padding : .5rem;
     font-size: 1rem;
     margin-top: 1rem;
+}
+@mixin btnBootstrapLookLike{
+    padding: .5rem;
+    border: 2px solid rgb(0, 123, 255);
+    border-radius: 5px;
+    background: $bootstrapPrimaryColorBackground;
+    color: white;
+    margin-left: 0;
+    cursor: pointer;
 }

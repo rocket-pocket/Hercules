@@ -1,4 +1,6 @@
 import { addGastosFijos } from "./addGastosFijos.js";
+import { OtrosGastos } from "./otrosGastos.js";
+
 export class gastosFijos{
     constructor(){
         this.aInputGastosFijos = document.querySelectorAll('.uno input')
@@ -34,4 +36,5 @@ console.log(this.outputResultado)
     
 }
 new addGastosFijos()
+new OtrosGastos()
 

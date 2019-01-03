@@ -96,7 +96,7 @@ export class Main{
     }
     logOut(){
        console.log('hola desde el segundo if')
-       window.location.href = 'http://localhost:8080/'
+       window.location.href = 'https://rocket-pocket.github.io/Hercules/'/* 'http://localhost:8080/' */
     }    
 }
 new gastosFijos()

@@ -1,3 +1,4 @@
+@import "mixins.css";
 .display-main-sections {
   display: initial;
   position: relative;
@@ -394,7 +395,7 @@ footer {
   border: 2px solid #0f8fc2;
   background: rgba(255, 112, 98, 0.5);
   list-style: none;
-  margin: 1rem 0 0.5rem 0;
+  margin: 1.5rem 0 0.5rem 0;
   /* color: white; */
   border-radius: 5px;
   display: flex;
@@ -414,6 +415,7 @@ footer {
   background: #1080f8;
   color: white;
   margin-left: 0;
+  cursor: pointer;
 }
 
 .jumbotron {

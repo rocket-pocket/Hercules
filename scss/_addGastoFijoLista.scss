@@ -1,3 +1,4 @@
+@import "mixins.css";
 .wrapper-add-lista{
     width: 100%;
     .lista{
@@ -11,7 +12,7 @@
         border: 2px solid rgb(15, 143, 194);
         background: rgba(255, 112, 98, 0.5);
         list-style: none;
-        margin: 1rem 0 .5rem 0;
+        margin: 1.5rem 0 .5rem 0;
         /* color: white; */
         border-radius: 5px;
         display: flex;
@@ -25,11 +26,6 @@
     }
     .boton-guardar, .boton-borrar{
         flex: 1 0 1;
-        padding: .5rem;
-        border: 2px solid rgb(0, 123, 255);
-        border-radius: 5px;
-        background: rgb(16, 128, 248);
-        color: white;
-        margin-left: 0;
+        @include btnBootstrapLookLike;
     }
 }
