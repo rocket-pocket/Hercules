@@ -10,15 +10,13 @@
         width: 100%;
         padding: 0.5rem;
         border: 2px solid rgb(15, 143, 194);
-        background: rgba(255, 112, 98, 0.5);
         list-style: none;
         margin: 1.5rem 0 .5rem 0;
-        /* color: white; */
         border-radius: 5px;
         display: flex;
         flex: 1 2 1;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-around;
     }
     a{
         flex: 50%;

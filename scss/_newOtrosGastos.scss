@@ -1,0 +1,20 @@
+.p-output-no-value{
+    width: 80%;
+    padding: 0.5rem;
+    background: rgba(207, 130, 14, 0.6);
+    position: relative; 
+    left: 10%;
+    border-radius: 5px;
+    border: 2px solid rgba(218, 103, 10, 0.8);
+}
+.lista-otros-gastos-guardados{
+    padding-left: 0;
+    margin-top: 2rem;
+    li{
+        list-style: none;
+        padding: 1rem;
+        margin-top: 0.2rem;
+        background: rgba(4, 154, 173, 0.6);
+        color: white;
+    }
+}

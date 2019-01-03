@@ -11,19 +11,27 @@ export class addGastosFijos{
         this.btnAddGastoFijo = document.querySelector('.btn-add-gastos-fijos')
         this.btnBorrarGastoFijo = document.querySelector('.btn-borrar-gastos-fijos')
 
+        /* TODO importar desde otros gastos */
+        this.outputMnsNovalueOtrosGastos = document.querySelector('.output-no-value')
+        /*  */
+
         this.btnMostrarGastosFijos.addEventListener('click', this.mostrarSeccionGastosFijos.bind(this))
 
         this.btnAddGastoFijo.addEventListener('click', this.addGastosFijo.bind(this))
     }
     mostrarSeccionGastosFijos(){
-        let mensaje = 'Añade un gasto fijo'
         this.addGastosFijosSeccionOculta.classList.toggle('hide-add-gastos-fijos')
         this.btnMostrarGastosFijos.classList.remove('btn-show-gastos-fijos')
         this.btnMostrarGastosFijos.classList.add('hide-btn-show-gastos-fijos')
-        this.containerAddGastosFijos.innerHTML = `<p class="p-msn-gasto-fijo">${mensaje}</p>`
     }
     addGastosFijo(){
-        //crear Elemento Producto
+        if(this.inputAddCantidad.value == '' || this.inputAddProducto.value == ''){
+            /* let mensaje = 'Añade un gasto fijo'
+            this.containerAddGastosFijos.innerHTML = `<p class="p-msn-gasto-fijo">${mensaje}</p>` */
+            let mensajeNoValue = 'Introduce un producto y una cantidad'
+            this.outputMnsNovalueOtrosGastos.innerHTML = `<p class ="p-output-no-value">${mensajeNoValue}</p>`
+        }else{
+            //crear Elemento Producto
         this.ulListaAddTareas
         this.inputAddProducto.value
         let tarea = this.inputAddProducto.value
@@ -65,6 +73,8 @@ export class addGastosFijos{
                 this.parentNode.removeChild(this); */
                 this.ulListaAddTareas.children[i].addEventListener('click', this.hola.bind(this))
             
+        }
+
         }
     }
     hola(){

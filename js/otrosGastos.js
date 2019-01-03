@@ -13,12 +13,30 @@ export class OtrosGastos{
         this.btnBorrarGastoFijo = document.querySelector('.btn-borrar-otros-gastos')
         /* *********** */
 
+        this.listaOtrosGastosGuardados = document.querySelector('#lista-otros-gastos-guardados')
+        this.outputMnsNovalueOtrosGastos = document.querySelector('.output-no-value')
+
         /* this.btnMostrarGastosFijos.addEventListener('click', this.mostrarSeccionGastosFijos.bind(this)) */
 
         this.btnAddOtrosGastos.addEventListener('click', this.addOtrosGastos.bind(this))
     }
     addOtrosGastos(){
-        //crear Elemento Producto
+
+        if(this.inputAddCantidad.value == '' || this.inputAddProducto.value == ''){
+            /* let mensaje = 'Introduce un producto y una cantidad'
+            let pMnsInputVacio = document.createElement('p')
+            let mensajeInputVacio = document.createTextNode(mensaje)
+            this.ulListaAddTareas.appendChild(mensajeInputVacio)
+            nuevaTarea.appendChild(pMnsInputVacio) */
+            let mensajeNoValue = 'Introduce un producto y una cantidad'
+            console.log('Introduce un producto y una cantidad')
+            this.outputMnsNovalueOtrosGastos.innerHTML = `<p class="p-output-no-value">${mensajeNoValue}</p>`
+            console.log(this.outputMnsNovalueOtrosGastos)
+
+        }else{
+        
+        this.outputMnsNovalueOtrosGastos.innerHTML = ''
+            //crear Elemento Producto
         this.ulListaAddTareas
         this.inputAddProducto.value
         let tarea = this.inputAddProducto.value
@@ -52,16 +70,6 @@ export class OtrosGastos{
         let mnsBtnBorrarGastoFijo = document.createTextNode('Borrar')
         btnBorrarGastoFijo.appendChild(mnsBtnBorrarGastoFijo)
         /* ******************* */
-
-        if(this.inputAddCantidad.value == '' || this.inputAddProducto.value == ''){
-            /* let mensaje = 'Introduce un producto y una cantidad'
-            let pMnsInputVacio = document.createElement('p')
-            let mensajeInputVacio = document.createTextNode(mensaje)
-            this.ulListaAddTareas.appendChild(mensajeInputVacio)
-            nuevaTarea.appendChild(pMnsInputVacio) */
-            console.log('Introduce un producto y una cantidad')
-
-        }else{
             /* this.inputAddCantidad.value = ''
             this.inputAddProducto.value = '' */
             for (let i = 0; i <= this.ulListaAddTareas.children.length -1; i++) {
@@ -73,18 +81,33 @@ export class OtrosGastos{
         }
         this.btnGuardarGastoFijo = document.querySelectorAll('.boton-guardar')
         for (let i = 0; i < this.btnGuardarGastoFijo.length; i++) {
-            /* const element = array[i]; */
             this.btnGuardarGastoFijo[i].addEventListener('click', this.guardarGasto.bind(this))
             
         }
     }
-    guardarGasto(){        
+    guardarGasto(){
+        this.listaOtrosGastosGuardados = document.querySelector('#lista-otros-gastos-guardados')      
         let oOtrosGastos = {
             nombreProducto : '',
             cantidadProducto : ''
         }
         oOtrosGastos.nombreProducto = this.inputAddProducto.value
         oOtrosGastos.cantidadProducto = this.inputAddCantidad.value
+
+
+        /* let newOne = [oOtrosGastos]
+        newOne.toString('nombre:', oOtrosGastos.nombreProducto, 'cantidad: ', oOtrosGastos.cantidadProducto) */
+
+        
+        let gastoGuardado = document.createElement('li')
+        let enlaceGastosGuardados = document.createElement('a')
+        let pEnlace = document.createElement('p')
+        let contenidoGastosGuardados = document.createTextNode(`concepto: ${oOtrosGastos.nombreProducto} cantidad: ${oOtrosGastos.cantidadProducto}`)
+        gastoGuardado.appendChild(enlaceGastosGuardados)
+        enlaceGastosGuardados.appendChild(pEnlace)
+        pEnlace.appendChild(contenidoGastosGuardados)
+        this.listaOtrosGastosGuardados.appendChild(gastoGuardado)
+
 
         console.log('hola ya')
         window.localStorage.setItem('Otros gastos',oOtrosGastos)
