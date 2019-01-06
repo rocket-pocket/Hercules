@@ -27,9 +27,20 @@
     padding-top: 3rem;
     h2{
         margin-bottom: 2rem;
-        background: #E9ECEF;
+        background: #007bff;
         padding: 1rem;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 700;
+        color: white;
+        border-radius: 10px;
     } 
+    p{
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .first-label{
         margin-top: 1.5rem;
     }   
@@ -41,8 +52,11 @@
     padding: 3rem;
     h2{
         margin-bottom: 2rem;
-        background: #E9ECEF;
+        background: #007bff;
         padding: 1rem;
+        font-weight: 700;
+        color: white;
+        border-radius: 10px;
     }
     input{
         margin-top: 2rem;
@@ -60,6 +74,10 @@
         margin-bottom: 2rem;
         background: #E9ECEF;
         padding: 1rem;
+        background: #007bff;
+        font-weight: 700;
+        color: white;
+        border-radius: 10px;
     }
     input{
         margin-top: 2rem;

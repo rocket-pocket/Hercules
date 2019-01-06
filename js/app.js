@@ -101,9 +101,7 @@ export class Main{
     }   
 }
 new gastosFijos()
-if(this.logIn){
-    new headerScroll()
-}
+new headerScroll()
 
 
 
