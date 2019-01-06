@@ -28,6 +28,7 @@ export class Main{
         this.msgLogin = document.querySelector('.msg-login')
         this.mainSectionOculta = document.querySelector('.main-sections')
         console.log(this.mainSectionOculta)
+        /* export const whenLoginOk = logIn */
         //comienzo
         this.btnComenzar.addEventListener('click', this.mostrarLoginSection.bind(this))
         //login-wrapper
@@ -97,10 +98,12 @@ export class Main{
     logOut(){
        console.log('hola desde el segundo if')
        window.location.href = 'https://rocket-pocket.github.io/Hercules/'/* 'http://localhost:8080/' */
-    }    
+    }   
 }
 new gastosFijos()
-new headerScroll()
+if(this.logIn){
+    new headerScroll()
+}
 
 
 

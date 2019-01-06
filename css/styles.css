@@ -214,6 +214,9 @@ footer {
 }
 .initial-header .col-12 {
   display: initial;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .initial-header .user-pic {
   width: 8rem;
@@ -451,10 +454,5 @@ footer {
 .jumbotron .btn-comenzar {
   display: initial;
 }
-
-/* 
-width: 80%;
-    margin-left: auto;
-    margin-right: auto; */
 
 /*# sourceMappingURL=styles.css.map */
