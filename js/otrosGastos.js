@@ -14,7 +14,7 @@ export class OtrosGastos{
         /* *********** */
 
         this.listaOtrosGastosGuardados = document.querySelector('#lista-otros-gastos-guardados')
-        this.outputMnsNovalueOtrosGastos = document.querySelector('.output-no-value')
+        this.outputMnsNovalueOtrosGastos = document.querySelector('.output-no-value-otros-gastos')
 
         /* this.btnMostrarGastosFijos.addEventListener('click', this.mostrarSeccionGastosFijos.bind(this)) */
 

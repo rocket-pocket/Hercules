@@ -1,4 +1,9 @@
 @import "mixins.css";
+*, *::before, *::after,
+*:before, *:after {
+  box-sizing: border-box;
+}
+
 .display-main-sections {
   display: initial;
   position: relative;
@@ -447,6 +452,10 @@ footer {
   color: white;
   margin-left: 0;
   cursor: pointer;
+}
+
+.newGastoFijoCreated {
+  margin-top: -1rem;
 }
 
 .p-output-no-value {

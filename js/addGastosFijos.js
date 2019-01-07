@@ -11,6 +11,8 @@ export class addGastosFijos{
         this.btnAddGastoFijo = document.querySelector('.btn-add-gastos-fijos')
         this.btnBorrarGastoFijo = document.querySelector('.btn-borrar-gastos-fijos')
 
+        this.newGuardarGastoFijo = document.querySelector('.nuevo-gasto-fijo-guardado')
+
         /* TODO importar desde otros gastos */
         this.outputMnsNovalueOtrosGastos = document.querySelector('.output-no-value')
         /*  */
@@ -31,6 +33,8 @@ export class addGastosFijos{
             let mensajeNoValue = 'Introduce un producto y una cantidad'
             this.outputMnsNovalueOtrosGastos.innerHTML = `<p class ="p-output-no-value">${mensajeNoValue}</p>`
         }else{
+
+            this.outputMnsNovalueOtrosGastos.innerHTML = ''
             //crear Elemento Producto
         this.ulListaAddTareas
         this.inputAddProducto.value
@@ -66,18 +70,70 @@ export class addGastosFijos{
         btnBorrarGastoFijo.appendChild(mnsBtnBorrarGastoFijo)
         /* ******************* */
 
+        nuevaTarea.appendChild(enlace), nuevaTarea.appendChild(enlace2), nuevaTarea.appendChild(btnGuardarGastoFijo), nuevaTarea.appendChild(btnBorrarGastoFijo)
 
-        for (let i = 0; i <= this.ulListaAddTareas.children.length -1; i++) {
-            nuevaTarea.appendChild(enlace), nuevaTarea.appendChild(enlace2), nuevaTarea.appendChild(btnGuardarGastoFijo), nuevaTarea.appendChild(btnBorrarGastoFijo)
+        btnGuardarGastoFijo.addEventListener('click', this.guardarGastoFijo.bind(this))
+                console.log(this.ulListaAddTareas)
+        //for (let i = 0; i <= this.ulListaAddTareas.children.length -1; i++) {
+            //nuevaTarea.appendChild(enlace), nuevaTarea.appendChild(enlace2), nuevaTarea.appendChild(btnGuardarGastoFijo), nuevaTarea.appendChild(btnBorrarGastoFijo)
                 /* this.ulListaAddTareas.children[i].addEventListener("click", function(){
                 this.parentNode.removeChild(this); */
-                this.ulListaAddTareas.children[i].addEventListener('click', this.hola.bind(this))
+
+                //TO REVIEW
+                /* btnGuardarGastoFijo.addEventListener('click', this.guardarGastoFijo.bind(this))
+                console.log(this.ulListaAddTareas) */
             
-        }
+        //}
 
         }
     }
-    hola(){
-        console.log('hola desde el click')
-    }    
+    guardarGastoFijo(nuevaTarea){
+        /* this.listaOtrosGastosGuardados = document.querySelector('#lista-otros-gastos-guardados') */ 
+        this.newGuardarGastoFijo     
+        let oOtrosGastos = {
+            nombreProducto : '',
+            cantidadProducto : ''
+        }
+        oOtrosGastos.nombreProducto = this.inputAddProducto.value
+        oOtrosGastos.cantidadProducto = this.inputAddCantidad.value
+
+        /* this.ulListaAddTareas.remove(nuevaTarea) */
+
+
+        let gastoGuardado = document.createElement('div')
+        gastoGuardado.className = 'form-group col-6 offset-3 delete-gasto-fijo newGastoFijoCreated'
+
+        let labelGastosGuardados = document.createElement('label')
+        let mnsLabelGastosGuardados = document.createTextNode(oOtrosGastos.nombreProducto)
+        labelGastosGuardados.appendChild(mnsLabelGastosGuardados)
+        labelGastosGuardados.className = 'first-label'
+        labelGastosGuardados.setAttribute('for', `input-${oOtrosGastos.nombreProducto}`)
+
+        let inputCantidadGastoGuardado = document.createElement('input')
+        let mnsInputCantidadGastoGuardado = document.createTextNode(oOtrosGastos.cantidadProducto)
+        inputCantidadGastoGuardado.appendChild(mnsInputCantidadGastoGuardado)
+        inputCantidadGastoGuardado.className = 'form-control'
+        inputCantidadGastoGuardado.id = `input-${oOtrosGastos.nombreProducto}`
+        inputCantidadGastoGuardado.setAttribute('placeholder', `${oOtrosGastos.cantidadProducto} €`)
+        inputCantidadGastoGuardado.setAttribute('name', `input-${oOtrosGastos.nombreProducto}`)
+        inputCantidadGastoGuardado.setAttribute('type' , 'text')
+
+        let btnDeleteGastoGuardado = document.createElement('button')
+        let mnsBtnDeleteGastoGuardado = document.createTextNode('Borrar')
+        btnDeleteGastoGuardado.appendChild(mnsBtnDeleteGastoGuardado)
+        btnDeleteGastoGuardado.classList = 'btn btn-primary btn-borrar'
+        btnDeleteGastoGuardado.setAttribute('type', 'button')
+
+        gastoGuardado.appendChild(labelGastosGuardados)
+        gastoGuardado.appendChild(inputCantidadGastoGuardado)
+        gastoGuardado.appendChild(btnDeleteGastoGuardado)
+
+        this.newGuardarGastoFijo.appendChild(gastoGuardado)
+
+
+        /* console.log('hola ya')
+        window.localStorage.setItem('Otros gastos',oOtrosGastos)
+        window.localStorage.getItem('otros gastos')
+        console.log(oOtrosGastos) */
+    }   
 }

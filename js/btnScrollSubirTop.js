@@ -13,3 +13,5 @@ export class ScrollTop{
         })
     }
 }
+//TODO 
+//ocultar y mostrar when is up and down
