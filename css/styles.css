@@ -40,10 +40,13 @@
   color: white;
   border-radius: 10px;
 }
-.uno p {
+.uno .p-gastos-fijos {
   width: 75%;
   margin-left: auto;
   margin-right: auto;
+}
+.uno .my-2 {
+  width: 80%;
 }
 .uno .first-label {
   margin-top: 1.5rem;
@@ -225,8 +228,6 @@ footer {
   width: 100%;
   position: relative;
   height: auto;
-  /* top: 30vh; */
-  /* msg-login msg-succes msg-wrong msg-warning */
 }
 .initial-header .display-3 {
   font-size: 3.5rem;
@@ -236,7 +237,7 @@ footer {
   display: none;
 }
 .initial-header .inpt-login {
-  display: initial;
+  display: block;
   width: 80%;
   margin-left: auto;
   margin-right: auto;

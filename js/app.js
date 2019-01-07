@@ -1,6 +1,6 @@
 import { gastosFijos } from "./gastosFijos.js";
 import { headerScroll } from "./scrollHeader.js";
-
+import { ScrollTop } from "./btnScrollSubirTop.js";
 
 export class Main{
     constructor(){
@@ -102,6 +102,7 @@ export class Main{
 }
 new gastosFijos()
 new headerScroll()
+new ScrollTop()
 
 
 
