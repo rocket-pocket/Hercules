@@ -26,6 +26,14 @@
         flex: 1 0 1;
         @include btnBootstrapLookLike;
     }
+    /* .output-no-value{
+        width: 50%;
+        padding: 0.5rem;
+        background: #ffc107;
+        position: relative;
+        left: 25%;
+        border-radius: 5px;
+    } */
 }
 .newGastoFijoCreated{
     margin-top: -1rem;

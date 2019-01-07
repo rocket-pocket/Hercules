@@ -24,6 +24,7 @@
   padding: 0.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  z-index: 999999;
 }
 .subir-scroll:hover {
   opacity: 1;
@@ -421,6 +422,14 @@ footer {
 
 .wrapper-add-lista {
   width: 100%;
+  /* .output-no-value{
+      width: 50%;
+      padding: 0.5rem;
+      background: #ffc107;
+      position: relative;
+      left: 25%;
+      border-radius: 5px;
+  } */
 }
 .wrapper-add-lista .lista {
   width: 100%;
@@ -458,28 +467,58 @@ footer {
   margin-top: -1rem;
 }
 
-.p-output-no-value {
-  width: 80%;
-  padding: 0.5rem;
-  background: rgba(207, 130, 14, 0.6);
-  position: relative;
-  left: 10%;
-  border-radius: 5px;
-  border: 2px solid rgba(218, 103, 10, 0.8);
+.wrapper-add-lista-otros-gastos {
+  text-align: center;
 }
-
-.lista-otros-gastos-guardados {
+.wrapper-add-lista-otros-gastos .lista {
   padding-left: 0;
   margin-top: 2rem;
 }
-.lista-otros-gastos-guardados li {
+.wrapper-add-lista-otros-gastos li {
+  display: block;
   list-style: none;
   padding: 1rem;
   margin-top: 0.2rem;
   background: rgba(4, 154, 173, 0.6);
   color: white;
+  border-radius: 10px;
+}
+.wrapper-add-lista-otros-gastos a {
+  display: block;
+}
+.wrapper-add-lista-otros-gastos button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.output-no-value-otros-gastos {
+  margin-top: 2rem;
+}
+
+.p-output-no-value {
+  width: 80%;
+  padding: 0.5rem;
+  background: #ffc107;
+  position: relative;
+  left: 10%;
+  border-radius: 5px;
+}
+
+/* .lista{
+    padding-left: 0;
+    margin-top: 2rem;
+    li{
+        list-style: none;
+        padding: 1rem;
+        margin-top: 0.2rem;
+        background: rgba(4, 154, 173, 0.6);
+        color: white;
+    }
+    a{
+        display: block;
+    }
+} */
 .jumbotron {
   position: relative;
   top: 0;

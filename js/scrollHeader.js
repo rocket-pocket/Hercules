@@ -11,6 +11,7 @@ export class headerScroll{
             this.header.classList.add('sticky-header')
             this.UserNameForStickyHeader.innerHTML = 'Daniel'
         }else{
+            this.UserNameForStickyHeader.innerHTML = ''
             this.header.classList.add('initial-header')
             this.header.classList.remove('sticky-header')
         }

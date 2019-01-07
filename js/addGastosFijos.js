@@ -73,7 +73,10 @@ export class addGastosFijos{
         nuevaTarea.appendChild(enlace), nuevaTarea.appendChild(enlace2), nuevaTarea.appendChild(btnGuardarGastoFijo), nuevaTarea.appendChild(btnBorrarGastoFijo)
 
         btnGuardarGastoFijo.addEventListener('click', this.guardarGastoFijo.bind(this))
-                console.log(this.ulListaAddTareas)
+
+        //TODO
+        //btnBorrarGastoFijo.addEventListener('click', this.borrarGastoFijo.bind(this))
+
         //for (let i = 0; i <= this.ulListaAddTareas.children.length -1; i++) {
             //nuevaTarea.appendChild(enlace), nuevaTarea.appendChild(enlace2), nuevaTarea.appendChild(btnGuardarGastoFijo), nuevaTarea.appendChild(btnBorrarGastoFijo)
                 /* this.ulListaAddTareas.children[i].addEventListener("click", function(){
@@ -97,7 +100,6 @@ export class addGastosFijos{
         oOtrosGastos.nombreProducto = this.inputAddProducto.value
         oOtrosGastos.cantidadProducto = this.inputAddCantidad.value
 
-        /* this.ulListaAddTareas.remove(nuevaTarea) */
 
 
         let gastoGuardado = document.createElement('div')
