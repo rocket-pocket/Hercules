@@ -28,70 +28,69 @@ export class addGastosFijos{
     }
     addGastosFijo(){
         if(this.inputAddCantidad.value == '' || this.inputAddProducto.value == ''){
-            /* let mensaje = 'Añade un gasto fijo'
-            this.containerAddGastosFijos.innerHTML = `<p class="p-msn-gasto-fijo">${mensaje}</p>` */
             let mensajeNoValue = 'Introduce un producto y una cantidad'
             this.outputMnsNovalueOtrosGastos.innerHTML = `<p class ="p-output-no-value">${mensajeNoValue}</p>`
         }else{
 
             this.outputMnsNovalueOtrosGastos.innerHTML = ''
             //crear Elemento Producto
-        this.ulListaAddTareas
-        this.inputAddProducto.value
-        let tarea = this.inputAddProducto.value
-        let nuevaTarea = document.createElement("li")
-        let enlace = document.createElement("a")
-        let contenido = document.createTextNode(tarea)
+            this.ulListaAddTareas
+            this.inputAddProducto.value
+            let tarea = this.inputAddProducto.value
+            let nuevaTarea = document.createElement("li")
+            let enlace = document.createElement("a")
+            let contenido = document.createTextNode(tarea)
 
-        ////crear Elemento Cantidad
-        this.inputAddCantidad.value
-        let tarea2 = this.inputAddCantidad.value
-        let enlace2 = document.createElement('a')
-        let contenidoCantidad = document.createTextNode(tarea2)
+            ////crear Elemento Cantidad
+            this.inputAddCantidad.value
+            let tarea2 = this.inputAddCantidad.value
+            let enlace2 = document.createElement('a')
+            let contenidoCantidad = document.createTextNode(tarea2)
 
-        enlace2.appendChild(contenidoCantidad)
-        /* ******************* */
+            enlace2.appendChild(contenidoCantidad)
+            /* ******************* */
 
-        enlace.appendChild(contenido)
-        this.ulListaAddTareas.appendChild(nuevaTarea);
-        /* ******************* */
+            enlace.appendChild(contenido)
+            this.ulListaAddTareas.appendChild(nuevaTarea);
+            /* ******************* */
 
-        ////crear Elemento Botón Guardar
-        let btnGuardarGastoFijo = document.createElement("button")
-        btnGuardarGastoFijo.className = 'boton-guardar' 
-        let mnsBtnGuardarGastoFijo = document.createTextNode('Guardar')
-        btnGuardarGastoFijo.appendChild(mnsBtnGuardarGastoFijo)
-        /* ******************* */
+            ////crear Elemento Botón Guardar
+            let btnGuardarGastoFijo = document.createElement("button")
+            btnGuardarGastoFijo.className = 'boton-guardar' 
+            let mnsBtnGuardarGastoFijo = document.createTextNode('Guardar')
+            btnGuardarGastoFijo.appendChild(mnsBtnGuardarGastoFijo)
+            /* ******************* */
 
-        ////crear Elemento Botón borrar
-        let btnBorrarGastoFijo = document.createElement("button")
-        btnBorrarGastoFijo.className = 'boton-borrar' 
-        let mnsBtnBorrarGastoFijo = document.createTextNode('Borrar')
-        btnBorrarGastoFijo.appendChild(mnsBtnBorrarGastoFijo)
-        /* ******************* */
+            ////crear Elemento Botón borrar
+            let btnBorrarGastoFijo = document.createElement("button")
+            btnBorrarGastoFijo.className = 'boton-borrar' 
+            let mnsBtnBorrarGastoFijo = document.createTextNode('Borrar')
+            btnBorrarGastoFijo.appendChild(mnsBtnBorrarGastoFijo)
+            /* ******************* */
 
-        nuevaTarea.appendChild(enlace), nuevaTarea.appendChild(enlace2), nuevaTarea.appendChild(btnGuardarGastoFijo), nuevaTarea.appendChild(btnBorrarGastoFijo)
+            /* borrar datos cuando pulsas GUARDAR */
+            for (let i = 0; i <= this.ulListaAddTareas.children.length - 1; i++){
+                nuevaTarea.appendChild(enlace), nuevaTarea.appendChild(enlace2), nuevaTarea.appendChild(btnGuardarGastoFijo), nuevaTarea.appendChild(btnBorrarGastoFijo)
+                btnGuardarGastoFijo.addEventListener('click', function(){
+                    this.parentNode.remove()
+                })
+            }
+            for (let i = 0; i <= this.ulListaAddTareas.children.length - 1; i++){
+                nuevaTarea.appendChild(enlace), nuevaTarea.appendChild(enlace2), nuevaTarea.appendChild(btnGuardarGastoFijo), nuevaTarea.appendChild(btnBorrarGastoFijo)
+                btnBorrarGastoFijo.addEventListener('click', function(){
+                    this.parentNode.remove()
 
-        btnGuardarGastoFijo.addEventListener('click', this.guardarGastoFijo.bind(this))
+                    //TODO
+                    /* this.inputAddProducto.value = ''
+                    this.inputAddCantidad.value = '' */
+                })
+            }             
 
-        //TODO
-        //btnBorrarGastoFijo.addEventListener('click', this.borrarGastoFijo.bind(this))
-
-        //for (let i = 0; i <= this.ulListaAddTareas.children.length -1; i++) {
-            //nuevaTarea.appendChild(enlace), nuevaTarea.appendChild(enlace2), nuevaTarea.appendChild(btnGuardarGastoFijo), nuevaTarea.appendChild(btnBorrarGastoFijo)
-                /* this.ulListaAddTareas.children[i].addEventListener("click", function(){
-                this.parentNode.removeChild(this); */
-
-                //TO REVIEW
-                /* btnGuardarGastoFijo.addEventListener('click', this.guardarGastoFijo.bind(this))
-                console.log(this.ulListaAddTareas) */
+            btnGuardarGastoFijo.addEventListener('click', this.guardarGastoFijo.bind(this))            
             
-        //}
-
         }
     }
-    guardarGastoFijo(nuevaTarea){
-        /* this.listaOtrosGastosGuardados = document.querySelector('#lista-otros-gastos-guardados') */ 
+    guardarGastoFijo(){
         this.newGuardarGastoFijo     
         let oOtrosGastos = {
             nombreProducto : '',
@@ -99,8 +98,7 @@ export class addGastosFijos{
         }
         oOtrosGastos.nombreProducto = this.inputAddProducto.value
         oOtrosGastos.cantidadProducto = this.inputAddCantidad.value
-
-
+        console.log(oOtrosGastos)
 
         let gastoGuardado = document.createElement('div')
         gastoGuardado.className = 'form-group col-6 offset-3 delete-gasto-fijo newGastoFijoCreated'
@@ -132,10 +130,13 @@ export class addGastosFijos{
 
         this.newGuardarGastoFijo.appendChild(gastoGuardado)
 
+        this.inputAddProducto.value = ''
+        this.inputAddCantidad.value = ''
 
-        /* console.log('hola ya')
-        window.localStorage.setItem('Otros gastos',oOtrosGastos)
-        window.localStorage.getItem('otros gastos')
-        console.log(oOtrosGastos) */
+        /* for (let i = 0; i <= this.ulListaAddTareas.children.length - 1; i++) {
+                nuevaTarea.appendChild(enlace), nuevaTarea.appendChild(enlace2), nuevaTarea.appendChild(btnBorrarGastoFijo)
+                this.ulListaAddTareas.children[i].addEventListener("click", function() {
+                    this.parentNode.removeChild(this)
+                }) */
     }   
 }

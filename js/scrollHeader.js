@@ -6,7 +6,7 @@ export class headerScroll{
     }
     headerUp(){
         if(pageYOffset > 250){
-            console.log('hola desde el scroll header')
+            /* console.log('hola desde el scroll header') */
             this.header.classList.remove('initial-header')
             this.header.classList.add('sticky-header')
             this.UserNameForStickyHeader.innerHTML = 'Daniel'
