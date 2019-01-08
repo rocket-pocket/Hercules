@@ -79,14 +79,11 @@ export class addGastosFijos{
                 nuevaTarea.appendChild(enlace), nuevaTarea.appendChild(enlace2), nuevaTarea.appendChild(btnGuardarGastoFijo), nuevaTarea.appendChild(btnBorrarGastoFijo)
                 btnBorrarGastoFijo.addEventListener('click', function(){
                     this.parentNode.remove()
-
-                    //TODO
-                    /* this.inputAddProducto.value = ''
-                    this.inputAddCantidad.value = '' */
                 })
             }             
 
-            btnGuardarGastoFijo.addEventListener('click', this.guardarGastoFijo.bind(this))            
+            btnGuardarGastoFijo.addEventListener('click', this.guardarGastoFijo.bind(this))
+            btnBorrarGastoFijo.addEventListener('click', this.limpiarInputsFields.bind(this))            
             
         }
     }
@@ -132,11 +129,10 @@ export class addGastosFijos{
 
         this.inputAddProducto.value = ''
         this.inputAddCantidad.value = ''
-
-        /* for (let i = 0; i <= this.ulListaAddTareas.children.length - 1; i++) {
-                nuevaTarea.appendChild(enlace), nuevaTarea.appendChild(enlace2), nuevaTarea.appendChild(btnBorrarGastoFijo)
-                this.ulListaAddTareas.children[i].addEventListener("click", function() {
-                    this.parentNode.removeChild(this)
-                }) */
-    }   
+    }
+    limpiarInputsFields(){
+        alert('¿seguro que deseas borrar?')
+        this.inputAddProducto.value = ''
+        this.inputAddCantidad.value = ''
+    }  
 }
