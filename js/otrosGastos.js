@@ -26,7 +26,6 @@ export class OtrosGastos{
             console.log(this.outputMnsNovalueOtrosGastos)
 
         }else{
-
         this.outputMnsNovalueOtrosGastos.innerHTML = ''
         let oOtrosGastos = {
             nombreProducto : '',
@@ -34,6 +33,7 @@ export class OtrosGastos{
         }
         oOtrosGastos.nombreProducto = this.inputAddProducto.value
         oOtrosGastos.cantidadProducto = this.inputAddCantidad.value 
+        console.log(oOtrosGastos)
 
         //crear Elemento Producto
         this.ulListaAddTareas

@@ -4,17 +4,16 @@ import { OtrosGastos } from "./otrosGastos.js";
 export class gastosFijos{
     constructor(){
         this.aInputGastosFijos = document.querySelectorAll('.uno input')
+        console.log(this.aInputGastosFijos)
         this.btnSumarTotal = document.querySelector('.btn-sumar-total')
         this.outputResultado = document.querySelector('.resultado')
         this.aBtnBorrarGastoFijo = document.querySelectorAll('.btn-borrar')
         this.aCampoGastoFijo = document.querySelectorAll('.delete-gasto-fijo')
-console.log(this.outputResultado)
         this.btnSumarTotal.addEventListener('click', this.sumarTotalGastosFijos.bind(this))
 
         for (let index = 0; index < this.aBtnBorrarGastoFijo.length; index++) {
             this.aBtnBorrarGastoFijo[index].addEventListener('click', this.borrarGastoFijo.bind(this))
         }
-        console.log(this.aBtnBorrarGastoFijo)
     }
     sumarTotalGastosFijos() {
         let total = 0;
@@ -28,12 +27,9 @@ console.log(this.outputResultado)
     }
     borrarGastoFijo(){
         for (let index = 0; index < this.aCampoGastoFijo.length; index++) {
-            /* const element = array[index]; */
-                        
+            /* const element = array[index]; */                        
         }
-    }
-    
-    
+    }    
 }
 new addGastosFijos()
 new OtrosGastos()

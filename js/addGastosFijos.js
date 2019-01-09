@@ -1,5 +1,7 @@
 export class addGastosFijos{
     constructor(){
+
+        //elementos del DOM
         this.btnMostrarGastosFijos = document.querySelector('.btn-show-gastos-fijos')
         this.addGastosFijosSeccionOculta = document.querySelector('.hide-add-gastos-fijos')
         this.containerAddGastosFijos = document.querySelector('.wrapper-add-gastos-fijos')
@@ -20,6 +22,7 @@ export class addGastosFijos{
         this.btnMostrarGastosFijos.addEventListener('click', this.mostrarSeccionGastosFijos.bind(this))
 
         this.btnAddGastoFijo.addEventListener('click', this.addGastosFijo.bind(this))
+        /* this.uno = null */
     }
     mostrarSeccionGastosFijos(){
         this.addGastosFijosSeccionOculta.classList.toggle('hide-add-gastos-fijos')
@@ -88,14 +91,14 @@ export class addGastosFijos{
         }
     }
     guardarGastoFijo(){
-        this.newGuardarGastoFijo     
+        this.newGuardarGastoFijo =[]    
         let oOtrosGastos = {
             nombreProducto : '',
             cantidadProducto : ''
         }
         oOtrosGastos.nombreProducto = this.inputAddProducto.value
         oOtrosGastos.cantidadProducto = this.inputAddCantidad.value
-        console.log(oOtrosGastos)
+        /* console.log(oOtrosGastos) */
 
         let gastoGuardado = document.createElement('div')
         gastoGuardado.className = 'form-group col-6 offset-3 delete-gasto-fijo newGastoFijoCreated'
@@ -113,7 +116,7 @@ export class addGastosFijos{
         inputCantidadGastoGuardado.id = `input-${oOtrosGastos.nombreProducto}`
         inputCantidadGastoGuardado.setAttribute('placeholder', `${oOtrosGastos.cantidadProducto} €`)
         inputCantidadGastoGuardado.setAttribute('name', `input-${oOtrosGastos.nombreProducto}`)
-        inputCantidadGastoGuardado.setAttribute('type' , 'text')
+        inputCantidadGastoGuardado.setAttribute('type', 'text')
 
         let btnDeleteGastoGuardado = document.createElement('button')
         let mnsBtnDeleteGastoGuardado = document.createTextNode('Borrar')
@@ -125,14 +128,52 @@ export class addGastosFijos{
         gastoGuardado.appendChild(inputCantidadGastoGuardado)
         gastoGuardado.appendChild(btnDeleteGastoGuardado)
 
-        this.newGuardarGastoFijo.appendChild(gastoGuardado)
+        /* this.newGuardarGastoFijo.appendChild(gastoGuardado)  */    
+        /* console.log(this.newGuardarGastoFijo)   */ 
+        /* for (let index = 0; index < this.newGuardarGastoFijo.length; index++) {
+            this.newGuardarGastoFijo.appendChild(gastoGuardado)
+            
+        } */
+
+        this.newGuardarGastoFijo.push(this.inputAddCantidad.value, this.inputAddProducto.value)/* .appendChild(gastoGuardado) */
+        console.log(this.newGuardarGastoFijo)
 
         this.inputAddProducto.value = ''
         this.inputAddCantidad.value = ''
+
+        /* let aDos = []
+        console.log(aDos)
+        for (let index = 0; index < aDos.length; index++) {
+            aDos.push(JSON.stringify(this.newGuardarGastoFijo))
+            
+        } */
+        /* let dos = localStorage.setItem('testObject', JSON.stringify(oOtrosGastos)) */
+        /* this.uno = dos */
+        /* let resultado = aDos
+        console.log('este es el resultado', resultado) */
+
+        /* this.outputOne = document.querySelector('.newone')
+            let a = JSON.stringify(oOtrosGastos.nombreProducto)
+            window.localStorage.setItem('gastos', a)
+            this.outputOne.innerHTML = localStorage.getItem('gastos') */
+
+        /* var testObject = { 'one': 1, 'two': 2, 'three': 3 }; */
+
+        // Put the object into storage
+        /* localStorage.setItem('testObject', JSON.stringify(oOtrosGastos)); */
+
+        // Retrieve the object from storage
+        /* var retrievedObject = localStorage.getItem('testObject');
+        let uno = JSON.stringify(retrievedObject)
+
+        this.newGuardarGastoFijo.innerHTML = `${uno}`
+
+        console.log('retrievedObject: ', JSON.parse(retrievedObject)); */
     }
     limpiarInputsFields(){
         alert('¿seguro que deseas borrar?')
         this.inputAddProducto.value = ''
         this.inputAddCantidad.value = ''
     }  
+    
 }
