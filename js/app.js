@@ -4,6 +4,7 @@ import { ScrollTop } from "./btnScrollSubirTop.js";
 import { Apps } from "./getJson.js";
 
 
+
 export class Main{
     constructor(){
         //comienzo
@@ -12,6 +13,7 @@ export class Main{
         this.pComenzar = document.querySelector('.p-empezamos')
         //login-wrapper
         this.UserPic = document.querySelector('.user-pic')
+
         this.inptUser = document.querySelector('#input-user')
         this.inptUser.value
         this.inptPassw = document.querySelector('#input-password')

@@ -13,7 +13,7 @@ export class addGastosFijos{
         this.btnAddGastoFijo = document.querySelector('.btn-add-gastos-fijos')
         this.btnBorrarGastoFijo = document.querySelector('.btn-borrar-gastos-fijos')
 
-        this.newGuardarGastoFijo = document.querySelector('.nuevo-gasto-fijo-guardado')
+        this.newGuardarGastoFijo = document.querySelectorAll('.nuevo-gasto-fijo-guardado')
 
         /* TODO importar desde otros gastos */
         this.outputMnsNovalueOtrosGastos = document.querySelector('.output-no-value')
@@ -22,7 +22,6 @@ export class addGastosFijos{
         this.btnMostrarGastosFijos.addEventListener('click', this.mostrarSeccionGastosFijos.bind(this))
 
         this.btnAddGastoFijo.addEventListener('click', this.addGastosFijo.bind(this))
-        /* this.uno = null */
     }
     mostrarSeccionGastosFijos(){
         this.addGastosFijosSeccionOculta.classList.toggle('hide-add-gastos-fijos')
@@ -91,14 +90,14 @@ export class addGastosFijos{
         }
     }
     guardarGastoFijo(){
-        this.newGuardarGastoFijo =[]    
+        let newLista = []
         let oOtrosGastos = {
             nombreProducto : '',
             cantidadProducto : ''
         }
         oOtrosGastos.nombreProducto = this.inputAddProducto.value
         oOtrosGastos.cantidadProducto = this.inputAddCantidad.value
-        /* console.log(oOtrosGastos) */
+
 
         let gastoGuardado = document.createElement('div')
         gastoGuardado.className = 'form-group col-6 offset-3 delete-gasto-fijo newGastoFijoCreated'
@@ -128,47 +127,20 @@ export class addGastosFijos{
         gastoGuardado.appendChild(inputCantidadGastoGuardado)
         gastoGuardado.appendChild(btnDeleteGastoGuardado)
 
-        /* this.newGuardarGastoFijo.appendChild(gastoGuardado)  */    
-        /* console.log(this.newGuardarGastoFijo)   */ 
-        /* for (let index = 0; index < this.newGuardarGastoFijo.length; index++) {
-            this.newGuardarGastoFijo.appendChild(gastoGuardado)
+        for (let index = 0; index < this.newGuardarGastoFijo.length; index++) {
+            const element = this.newGuardarGastoFijo[index]
+            element.appendChild(gastoGuardado)           
             
-        } */
+        }
 
-        this.newGuardarGastoFijo.push(this.inputAddCantidad.value, this.inputAddProducto.value)/* .appendChild(gastoGuardado) */
-        console.log(this.newGuardarGastoFijo)
+        //crear array de NodeList nuevos GAstos Fijos despues de pulsar boton guardar
+        this.nuevoListaGastosFijos = document.querySelectorAll('.newGastoFijoCreated')
+        console.log('nuevalista', this.nuevoListaGastosFijos)
+        newLista.push(this.nuevoListaGastosFijos)
+        console.log('array nueva lista', newLista) 
 
         this.inputAddProducto.value = ''
         this.inputAddCantidad.value = ''
-
-        /* let aDos = []
-        console.log(aDos)
-        for (let index = 0; index < aDos.length; index++) {
-            aDos.push(JSON.stringify(this.newGuardarGastoFijo))
-            
-        } */
-        /* let dos = localStorage.setItem('testObject', JSON.stringify(oOtrosGastos)) */
-        /* this.uno = dos */
-        /* let resultado = aDos
-        console.log('este es el resultado', resultado) */
-
-        /* this.outputOne = document.querySelector('.newone')
-            let a = JSON.stringify(oOtrosGastos.nombreProducto)
-            window.localStorage.setItem('gastos', a)
-            this.outputOne.innerHTML = localStorage.getItem('gastos') */
-
-        /* var testObject = { 'one': 1, 'two': 2, 'three': 3 }; */
-
-        // Put the object into storage
-        /* localStorage.setItem('testObject', JSON.stringify(oOtrosGastos)); */
-
-        // Retrieve the object from storage
-        /* var retrievedObject = localStorage.getItem('testObject');
-        let uno = JSON.stringify(retrievedObject)
-
-        this.newGuardarGastoFijo.innerHTML = `${uno}`
-
-        console.log('retrievedObject: ', JSON.parse(retrievedObject)); */
     }
     limpiarInputsFields(){
         alert('¿seguro que deseas borrar?')
@@ -177,3 +149,4 @@ export class addGastosFijos{
     }  
     
 }
+
